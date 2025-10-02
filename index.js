@@ -38,8 +38,8 @@ app.get('/logger/pino', (req, res) => {
  * @description: Read file syncronously through fs
  */
 app.get('/readfile/sync', (req, res) => {
-    try {
-        const data = fs.readFileSync('./dummy-texts-over-100mb.txt', 'utf8');
+	try {
+		const data = fs.readFileSync('./dummy-texts-over-100mb.txt', 'utf8');
 
 		// Old callback method
 		// fs.readFile('./dummy-texts-over-100mb.txt', 'utf8', (err, data) => {
@@ -51,24 +51,24 @@ app.get('/readfile/sync', (req, res) => {
 		//     }
 		// });
 
-        res.send(data);
-    } catch (error) {
-        logger.error('Error reading file synchronously:', error);
-        res.status(500).send('Error reading file');
-    }
+		res.send(data);
+	} catch (error) {
+		logger.error('Error reading file synchronously:', error);
+		res.status(500).send('Error reading file');
+	}
 });
 
 /**
  * @description: Read file asyncronously through fs
  */
 app.get('/readfile/async', async (req, res) => {
-    try {
-        const data = await fsAsync.readFile('./dummy-texts-over-100mb.txt', 'utf8');
-        res.send(data);
-    } catch (error) {
-        logger.error('Error reading file asynchronously:', error);
-        res.status(500).send('Error reading file');
-    }
+	try {
+		const data = await fsAsync.readFile('./dummy-texts-over-100mb.txt', 'utf8');
+		res.send(data);
+	} catch (error) {
+		logger.error('Error reading file asynchronously:', error);
+		res.status(500).send('Error reading file');
+	}
 });
 
 /**
@@ -136,6 +136,16 @@ app.get('/timeout/used', async (req, res) => {
 	}).finally(() => {
 		clearTimeout(t);
 	});
+});
+
+app.get('/cluster/without', async (req, res) => {
+	let number = 0;
+	const start = Date.now();
+	for (let i = 0; i <= 999999; i++) {
+		number += 1;
+	}
+
+	res.json([{ status: true, number, processTime: Date.now() - start }]);
 });
 
 app.get('/api/products', async (req, res) => {

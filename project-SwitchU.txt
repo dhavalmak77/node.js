@@ -1,0 +1,114 @@
+Project: SwitchU
+https://www.figma.com/design/jsbNgQ6hCpAUMgyxBYcLdg/SwitchU--Final-Copy-?node-id=7287-23627&p=f&t=7A9gn2KVSPYxQp7C-0
+https://www.loom.com/share/a046635dfbf44489bf734b539a1e91a4
+
+Landing Page
+	- Hero Section															(Dynamic Search Results)        
+	- Why SwitchU
+	- You may have seen us on												(Can make dynamic)
+	- Benefits / The smarter way to save
+	- How it Works
+	- Deals Banner
+	- Commission Section
+	- Testimonials															(?Static or Dynamic)
+	- Partner Banner
+	- Blogs																	(Dynamic Blogs)
+	- Newsletter
+
+Internet Deal Page
+	- Find Deals Search Results												(Dynamic Population)
+	- Filters & Deals Listing												(Dynamic)
+	- Featured Broadband Deal												(Dynamic)
+	- How to compare Broadband deals
+	- Broadband proce rises Section
+	- Why choose SwitchU Section
+	- Brand Providers Listing												(Can make dynamic)
+	- Broadband Reminder Form												(Form submission)
+	- Broadband Renewal Reminder Form										(Form submission)
+	- Types of Broadband in area
+	- FAQs																	(Dynamic)
+	- Fastest broadband Listing												(Dynamic)
+	- What Internet Speed Do I need
+	- What type of broadband package should I choose?
+	- What type of broadband package should I choose?
+	- Compare broadband deals in your local area
+	- Testimonials															(?Static or Dynamic)
+
+Mobile Phone Deal Page
+	- Find Deals Search Results												(Dynamic Population)
+	- Brands Tabs															(Dynamic)
+	- Products Listing														(Dynamic)
+	- How to choose the right mobile phone deal
+	- Broadband providers you can compare with SwitchU
+	- Latest handsets for 2025												(Dynamic)
+	- Why choose SwitchU?
+	- SwitchU Mobile Awards 2025 winners									(Dynamic)
+	- What are the main benefits of a pay monthly phone contract?
+	- FAQs																	(Dynamic)
+	- Testimonials															(?Static or Dynamic)
+
+--- Sales & Business
+
+Sales Partners Page
+	- Top section with CTAs
+	- Why Us?
+	- What you can sell?
+	- How it Works? / Simple Steps to get started
+	- See your partner portal in action
+	- Take a quick tour & stay compliant
+	- Estimate your earning													(Math Calculation)
+	- Sales channels & partner paths
+	- Requirements & what you'll need
+	- Support & training that has your back
+	- Commissions & payouts made simple
+	- FAQs																	(Dynamic)
+	- What our sales partners say											(?Static or Dynamic)
+	- Start selling smarter with SwitchU
+
+Supplier Partners Page
+	- Top section with CTAs
+	- Why Us?
+	- How SwitchU Works? / How your services go live on SwitchU network
+	- Integration pack
+	- Transparent routing logic
+	- Invisible to the market, accountable to you
+	- Supplier partner requirements + controls you keep
+	- Compliance & security snapshot
+	- Your path to go-live
+	- Supplier FAQs
+	- Grow your revenue without adding headcount
+
+Business Landing Page
+	- Top section with CTAs + Quotes Service Form + Features Listing
+	- Find your business size
+	- Check what's available at your business								(Dynamic Population)
+	- Your dedicated canadian telecom advisor
+	- The challenges Canadian business face
+	- Quick savings estimator												(Math Calculation)
+	- How it works
+	- The challenges Canadian businesses face
+	- Proven results. Real savings.
+	- FAQs / Got questions? We've got answers								(Dynamic)
+	- Testimonials															(?Static or Dynamic)
+	- Banner: Don't leave savings on the table
+	- Contact us Form														(Form submission)
+
+Blogs
+	- Search blogs															(Dynamic Population)
+	- Popular Articles														(Dynamic)
+	- Success stories														(Dynamic)
+	- Featured & Trending													(Dynamic)
+	- Latest news & updates													(Dynamic)
+	- Business Tips															(Dynamic)
+	- Growth Strategies														(Dynamic)
+	- Newsletter Subscription Banner
+
+Blog details																(Dynamic)
+	- Title
+	- Meta infos
+	- Overview
+	- Newsletter Subscription
+	- Blog Content
+	- Author with Description
+	- Previous/Next posts
+	- Related Posts section

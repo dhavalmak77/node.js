@@ -1,4 +1,5 @@
 const express = require('express');
+const path = require('path');
 const pino = require('pino');
 const fs = require('fs');
 const fsAsync = require('fs/promises');
@@ -8,6 +9,15 @@ const app = express();
 const logger = pino({ level: 'info' });
 const PORT = 3000;
 let t = null;
+
+// View engine setup
+app.set('view engine', 'ejs');
+app.set('views', path.join(__dirname, 'views'));
+
+app.get('/view/products', (req, res) => {
+	const { products } = require('./dummy-products.json');
+	res.render('products', { products });
+});
 
 /**
  * @description: Get Hello World

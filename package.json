@@ -23,6 +23,7 @@
   },
   "dependencies": {
     "autocannon": "^8.0.0",
+    "ejs": "^3.1.10",
     "express": "^5.1.0",
     "pino": "^9.11.0"
   }

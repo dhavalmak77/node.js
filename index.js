@@ -154,6 +154,16 @@ app.get('/api/products', async (req, res) => {
 	res.json([{ id: 1, name: 'Product 1' }]);
 });
 
+app.get('/emitter', (req, res) => {
+	const EventEmitter = require('events');
+	const myEmitter = new EventEmitter();
+	myEmitter.on('event', () => {
+		console.log('an event occurred!');
+	});
+	myEmitter.emit('event');
+	res.send('Event emitted, check console');
+});
+
 /**
  * @description: Server is running on port ${PORT}
 */

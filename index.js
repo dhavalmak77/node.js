@@ -4,11 +4,20 @@ const pino = require('pino');
 const fs = require('fs');
 const fsAsync = require('fs/promises');
 const { Worker } = require('worker_threads');
+const { rateLimit } = require('express-rate-limit');
 
 const app = express();
 const logger = pino({ level: 'info' });
 const PORT = 3000;
 let t = null;
+
+const limiter = rateLimit({
+	windowMs: 15 * 60 * 1000, // 15 minutes
+	limit: 100, // Limit each IP to 100 requests per `window` (here, per 15 minutes)
+	standardHeaders: true, // Return rate limit info in the `RateLimit-*` headers
+	legacyHeaders: false, // Disable the `X-RateLimit-*` headers
+	ipv6Subnet: 56, // Set to 60 or 64 to be less aggressive, or 52 or 48 to be more aggressive
+})
 
 // View engine setup
 app.set('view engine', 'ejs');
@@ -18,6 +27,8 @@ app.get('/view/products', (req, res) => {
 	const { products } = require('./dummy-products.json');
 	res.render('products', { products });
 });
+
+app.use(limiter);
 
 /**
  * @description: Get Hello World

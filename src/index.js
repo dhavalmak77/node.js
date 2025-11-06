@@ -5,11 +5,23 @@ const fs = require('fs');
 const fsAsync = require('fs/promises');
 const { Worker } = require('worker_threads');
 const { rateLimit } = require('express-rate-limit');
+const passportRoutes = require('./routes/passport');
+const session = require('express-session');
+const passport = require('passport');
 
 const app = express();
 const logger = pino({ level: 'info' });
 const PORT = 3000;
 let t = null;
+
+app.use(session({
+	secret: 'secret',
+	resave: false,
+	saveUninitialized: true
+}));
+
+app.use(passport.initialize());
+app.use(passport.session());
 
 const limiter = rateLimit({
 	windowMs: 15 * 60 * 1000, // 15 minutes
@@ -24,7 +36,7 @@ app.set('view engine', 'ejs');
 app.set('views', path.join(__dirname, 'views'));
 
 app.get('/view/products', (req, res) => {
-	const { products } = require('./dummy-products.json');
+	const { products } = require('../dummy-products.json');
 	res.render('products', { products });
 });
 
@@ -34,7 +46,7 @@ app.use(limiter);
  * @description: Get Hello World
  */
 app.get('/', (req, res) => {
-	res.send('Hello World');
+	res.send('Hello World!');
 });
 
 /**
@@ -184,6 +196,8 @@ app.get('/emitter', (req, res) => {
 	myEmitter.emit('event');
 	res.send('Event emitted, check console');
 });
+
+app.use('/passport/', passportRoutes);
 
 /**
  * @description: Server is running on port ${PORT}
